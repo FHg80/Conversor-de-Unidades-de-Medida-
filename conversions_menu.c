@@ -23,6 +23,9 @@ void temp_menu() {
         case 3:
           select_menu(KELVIN);
           break;
+        default:
+            printf("Digite um número de 1 a 3.\n");
+            break;
     }
 
 }
@@ -46,7 +49,11 @@ void select_menu(char option) {
                 case 2:
                     farenheit_conversion(KELVIN);
                     break;
+                default: 
+                    printf("Digite [1] ou [2]\n");
+                    break;
             }
+
             break;
         case CELSIUS:
             printf("Digite [1] para converter de Celsius para Farenheit\n");
@@ -62,7 +69,11 @@ void select_menu(char option) {
                 case 2: 
                     celsius_conversion(KELVIN);
                     break;
+                default: 
+                    printf("Digite [1] ou [2]\n");
+                    break;
             }
+
             break;
         case KELVIN:
             printf("Digite [1] para converter de Kelvin para Farenheit\n");
@@ -78,7 +89,11 @@ void select_menu(char option) {
                 case 2:
                     kelvin_conversion(CELSIUS);
                     break;
+                default: 
+                    printf("Digite [1] ou [2]\n");
+                    break;
             }
+
+            break;
     }
 }
-
