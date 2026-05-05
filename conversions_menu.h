@@ -5,8 +5,9 @@
 
 enum Options {
     CELSIUS = 'C',
-    KELVIN = 'K'
+    KELVIN = 'K',
+    FARENHEIT = 'F'
 };
 
 void temp_menu();
-void farenheit_menu();
+void select_menu(char option);

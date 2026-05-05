@@ -4,3 +4,4 @@
 #include <stdlib.h>
 
 void farenheit_conversion(char option);
+void celsius_conversion(char option);
