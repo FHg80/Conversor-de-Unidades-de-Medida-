@@ -4,3 +4,4 @@
 #include <stdlib.h>
 
 void temp_menu();
+void farenheit_menu();
