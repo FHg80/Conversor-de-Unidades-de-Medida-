@@ -8,6 +8,7 @@ void temp_menu() {
 
     printf("Digite [1] para converter de Farenheit\n");
     printf("Digite [2] para converter de Celsius\n");
+    printf("Digite [3] para converter de Kelvin\n");
     fgets(buffer, sizeof(buffer), stdin);
 
     option = atoi(buffer);
@@ -18,6 +19,9 @@ void temp_menu() {
           break;  
         case 2:
           select_menu(CELSIUS);
+          break;
+        case 3:
+          select_menu(KELVIN);
           break;
     }
 
@@ -59,7 +63,22 @@ void select_menu(char option) {
                     celsius_conversion(KELVIN);
                     break;
             }
+            break;
+        case KELVIN:
+            printf("Digite [1] para converter de Kelvin para Farenheit\n");
+            printf("Digite [2] para converter de Kelvin para Celsius\n");
+            fgets(buffer, sizeof(buffer), stdin);
 
+            temp_option = atoi(buffer);
+
+            switch(temp_option) {
+                case 1:
+                    kelvin_conversion(FARENHEIT);
+                    break;
+                case 2:
+                    kelvin_conversion(CELSIUS);
+                    break;
+            }
     }
 }
 

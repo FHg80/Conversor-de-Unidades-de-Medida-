@@ -44,3 +44,25 @@ void celsius_conversion(char option) {
     }
 
 }
+
+void kelvin_conversion(char option) {
+    char buffer[10];
+    double temp_k = 0;
+    double new_temp = 0;
+
+    printf("Insira a temperatura em Kelvin:");
+    fgets(buffer, sizeof(buffer), stdin);
+
+    temp_k = strtod(buffer, NULL);
+
+    switch(option) {
+        case FARENHEIT:
+            new_temp = (temp_k * 1.8) - 459.67;
+            printf("%.2f Graus Farenheit\n", new_temp);
+            break;
+        case CELSIUS:
+            new_temp = temp_k - 273.15;
+            printf("%.2f Graus Celsius\n", new_temp);
+            break;
+    }
+}
